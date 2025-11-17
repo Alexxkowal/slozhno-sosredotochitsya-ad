@@ -4,17 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <title>Сложно сосредоточиться</title>
-    <script src="./scripts/script.js"></script>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/mobile-icon.png" />
   </head>
   <body class="page">
     <header class="header decorated-zone">
+      <span class="rec" aria-hidden="true">rec</span>
       <nav class="header__theme-menu">
         <ul class="header__theme-menu-list">
           <li class="header__theme-menu-item">
             <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
+              class="header__theme-menu-button header__theme-menu-button_type_light">
               День
             </button>
           </li>
@@ -35,6 +44,156 @@
           </li>
         </ul>
       </nav>
+      <h1 class="header__logo">no focus</h1>
+      <div class="header__text">
+        <p class="header__paragraph title-decor">
+          Что делать, когда не можешь делать ничего<br />
+          Или почему нам так сложно сконцентрироваться, особенно когда очень надо
+        </p>
+      </div>
     </header>
+    <main class="content">
+      <section class="section-reasons content-section content__section">
+        <h2 class="content-section__title">Почему сосредоточиться так сложно</h2>
+        <div class="text-blocks">
+          <article class="text-block">
+            <h3 class="text-block__heading title-decor">Многозадачность</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Особенно сложно сосредоточиться, когда задач много и все они —
+                важные. Где же легендарная многозадачность, когда она так нужна
+                вам (и всем нанимающим менеджерам этого мира)? А дело в том, что
+                её просто не существует. Исследователи
+                <a
+                  class="content__link"
+                  href="https://dana.org/article/multicosts-of-multitasking/"
+                  target="_blank"
+                >выяснили</a>
+                , что мозгу тяжело концентрироваться даже на двух делах
+                одновременно. А когда в поле внимания попадает несколько важных
+                задач, организм паникует и выделяет кортизол и адреналин —
+                «гормоны стресса». Из-за этого мы работаем невнимательно:
+                ошибаемся и быстро устаём.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__heading title-decor">Дофамин</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                С гормонами стресса всё понятно, но дальше — ещё интереснее.
+                В нашей невозможности сосредоточиться замешана и противоположность
+                стрессу — дофамин. Это вещество участвует в системе вознаграждения
+                мозга. Причём тут он? Мы часто отвлекаемся от важной задачи на
+                что-то более «приятное» — соцсети, уведомления, развлечения.
+                В это время выделяется дофамин, и мы чувствуем удовольствие.
+                Чем больше отвлекаемся — тем больше хочется отвлекаться дальше.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section-factors content-section content__section">
+        <h2 class="content-section__title">Что снижает концентрацию внимания?</h2>
+        <div class="text-blocks">
+          <article class="text-block">
+            <h3 class="text-block__heading title-decor">Многозадачность</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Как концентрация может снижаться из-за… концентрации? Любая
+                стрессовая ситуация заставляет мозг постоянно «сканировать»
+                окружающую среду. Например, проверять новости вместо работы.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__heading title-decor">Еда</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                «Быстрые углеводы» дают энергию мгновенно — но также быстро
+                забирают её обратно. Отсюда «качели» с усталостью и сонливостью.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__heading title-decor">Гаджеты</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Постоянные переключения: код → сообщения → видео → подкаст —
+                всё это дробит внимание. На восстановление концентрации нужно
+                до 20 минут.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="section-tips content-section content__section">
+        <h2 class="content-section__title">
+          Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх секунд)
+        </h2>
+        <div class="text-blocks">
+          <h3 class="section-tips__title title-decor">
+            5 простых (но не очень) советов
+          </h3>
+          <article class="text-block">
+            <h3 class="text-block__subheading title-decor">Представьте небо и облака</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Лёгкая медитация помогает успокоиться и вернуться в момент,
+                а не застревать в тревожных мыслях.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__subheading title-decor">Включите музыку</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Лучше спокойную и нейтральную — любимая музыка может только
+                сильнее отвлекать.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__subheading title-decor">Прогуляйтесь</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Природа повышает концентрацию: доказано исследованиями. Даже
+                20-минутная прогулка работает.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__subheading title-decor">Хорошо ешьте</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Больше клетчатки и цельнозерновых продуктов — меньше «скачков»
+                сахара и усталости.
+              </p>
+            </div>
+          </article>
+          <article class="text-block">
+            <h3 class="text-block__subheading title-decor">Читайте</h3>
+            <div class="text-block__main-content">
+              <p class="text-block__paragraph">
+                Бумажные книги развивают навык длительной концентрации гораздо
+                сильнее, чем соцсети.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="content-section content__section grid">
+        <h2 class="grid-heading title-decor">А можно в картинках?</h2>
+        <img src="./images/sunset.png" loading="lazy" alt="Иллюстрация заката" class="grid__image" />
+        <img src="./images/ice-cream.png" loading="lazy" alt="Иллюстрация с десертом" class="grid__image" />
+        <img src="./images/tape.png" loading="lazy" alt="Иллюстрация с кассетой" class="grid__image" />
+        <img src="./images/books.png" loading="lazy" alt="Иллюстрация стопки книг" class="grid__image" />
+        <img src="./images/street.png" loading="lazy" alt="Иллюстрация японской улицы" class="grid__image" />
+      </section>
+    </main>
+    <footer class="footer decorated-zone">
+      <h2 class="footer__logo">focus</h2>
+    </footer>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

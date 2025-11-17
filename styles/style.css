@@ -1,5 +1,322 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--main-font-family);
+  background-position: center;
+  background-size: cover;
+  background-image: url('/images/cover-image-dark.png');
+  background-attachment: fixed;
+}
+
+.content {
+  line-height: var(--main-line-height);
+  font-size: var(--main-text-size);
+  padding: calc(4 * var(--main-gap)) var(--main-gap);
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  inset-block-start: var(--main-gap);
+  inset-inline-end: var(--main-gap);
+  border-block-start: 1px solid var(--nav-color);
+  border-inline-end: 1px solid var(--nav-color);
+}
+
+.decorated-zone::after {
+  inset-block-end: var(--main-gap);
+  inset-inline-start: var(--main-gap);
+  border-block-end: 1px solid var(--nav-color);
+  border-inline-start: 1px solid var(--nav-color);
+}
+
+.content__link {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  text-decoration: none;
+}
+
+.content__link:hover {
+  border-block-end: 1px solid var(--main-text-color);
+}
+
+.content__link:focus {
+  outline: 1px solid var(--main-text-color);
+  border-block-end: none;
+}
+
+.header {
+  display: grid;
+  justify-items: end;
+  align-items: center;
+  grid-template-rows: 1fr min-content 1fr;
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: var(--main-gap);
+  position: relative;
+  font-size: var(--main-text-size);
+}
+
+@supports (block-size: 100dvb) {
+  .header {
+    block-size: 100dvb;
+  }
+}
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--main-gap);
+}
+
+.header__theme-menu-button {
+  display: block;
+  position: relative;
+  line-height: 1;
+  padding: 2px 13px 4px;
+  border: 1px solid transparent;
+  background: transparent;
+  text-transform: lowercase;
+  cursor: pointer;
+  color: var(--nav-color);
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--nav-hover-color);
+}
+
+.header__theme-menu-button:focus::after {
+  content: '';
+  position: absolute;
+  inline-size: 100%;
+  block-size: 1px;
+  background-color: var(--nav-color);
+  inset-inline-start: 0;
+  inset-block-end: -2px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border-color: var(--nav-color);
+}
+
+.header__logo {
+  justify-self: start;
+  color: var(--header-logo-color);
+  font-size: var(--header-logo-size);
+  line-height: 0.825;
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__paragraph {
+  line-height: var(--main-line-height);
+  font-weight: bold;
+}
+
+.rec {
+  inset-inline-end: calc(var(--main-gap) + 28px);
+  inset-block-start: calc(var(--main-gap) + 2px);
+  position: absolute;
+  color: var(--nav-color);
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  text-transform: uppercase;
+}
+
+.rec::after {
+  content: '';
+  inset-inline-end: 0;
+  inset-block-start: 50%;
+  margin: -5px -20px 0 0;
+  position: absolute;
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: 50%;
+  background-color: var(--nav-color);
+  box-shadow: 0 0 4px 2px var(--nav-color);
+}
+
+.content-section:not(:last-of-type) {
+  margin-block-end: calc(5 * var(--main-gap));
+}
+
+.content-section__title {
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+  color: var(--section-heading-color);
+  margin-block-end: calc(2 * var(--main-gap));
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--main-heading-color);
+}
+
+.section-reasons {}
+
+.section-factors {}
+
+.section-tips {}
+
+.tips__title {
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.text-block {
+  margin-block-start: calc(2 * var(--main-gap));
+}
+
+.text-block__heading {
+  line-height: var(--main-line-height);
+  font-size: var(--main-text-size);
+}
+
+.text-block__main-content {
+  color: var(--main-text-color);
+}
+
+.text-block__subheading {
+  font-weight: normal;
+  margin-block-start: calc(2 * var(--main-gap));
+}
+
+.text-block__paragraph {
+  line-height: var(--main-line-height);
+  margin-block-start: var(--main-gap);
+}
+
+.section-tips .text-block__subheading {
+  font-size: var(--main-text-size);
+  line-height: var(--main-line-height);
+}
+
+.grid {
+  display: grid;
+  gap: var(--main-gap);
+}
+
+.grid-heading {
+  line-height: var(--main-line-height);
+  font-size: var(--main-text-size);
+}
+
+.grid__image {
+  inline-size: 100%;
+}
+
+.footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  min-block-size: 668px;
+  position: relative;
+  padding: var(--main-gap);
+}
+
+.footer__logo {
+  text-shadow: 2px 2px 0 var(--accent-color);
+  line-height: 0.825;
+  font-size: var(--footer-logo-size);
+  color: var(--footer-logo-color);
+}
+
+@media (min-width: 768px) {
+
+  .header__logo {
+    position: relative;
+    inset-inline-start: calc(-1 * var(--main-gap));
+  }
+
+  .header__text {
+    inline-size: 50%;
+  }
+
+  .content {
+    padding: calc(3 * var(--main-gap)) var(--main-gap);
+  }
+
+  .content-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--main-gap);
+  }
+
+  .section-reasons .content-section__title {
+    grid-column: 1/2;
+  }
+
+  .section-factors .text-blocks {
+    grid-column: 1/-1;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-heading {
+    grid-column: 1/-1;
+  }
+
+  .grid__image {
+    object-fit: cover;
+    object-position: center;
+    block-size: 100%;
+  }
+
+  .grid__image:first-of-type {
+    grid-column: span 2;
+  }
+
+  .grid__image:nth-of-type(2),
+  .grid__image:nth-of-type(3) {
+    grid-row: span 2;
+  }
+
+  .grid__image:last-of-type {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header {
+    min-block-size: 640px;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+
+  .content-section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-reasons .text-blocks {
+    grid-column: 2 / -1;
+  }
+
+  .section-factors .text-blocks {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--main-gap);
+    grid-column: 1 / -1;
+  }
+
+  .section-factors .text-block {
+    margin-block-start: 0;
+  }
+
+  .section-tips .text-blocks {
+    grid-column: 2 / -1;
+  }
 }
